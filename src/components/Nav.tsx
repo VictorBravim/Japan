@@ -30,7 +30,6 @@ export default function Nav() {
                     <button className="text-base md:text-lg" onClick={() => scrollToSection('sobre')}>Sobre</button>
                     <button className="text-base md:text-lg" onClick={() => scrollToSection('locais')}>Locais</button>
                     <button className="text-base md:text-lg" onClick={() => scrollToSection('recursos')}>Recursos</button>
-                    <button className="text-base md:text-lg" onClick={() => scrollToSection('servico')}>Serviço</button>
                 </div>
                 <button className="bg-none hidden text-white lg:block rounded-full text-base md:text-5xl font-bold px-4 mt-4 md:mt-0 mr-0 lg:mr-8">
                 </button>
