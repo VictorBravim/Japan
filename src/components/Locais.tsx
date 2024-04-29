@@ -1,8 +1,12 @@
 // pages/Locais.tsx
 'use client'
-import React, { useState } from 'react';
+import React from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import Image from 'next/image';
 import banner from '@/assets/banner.png';
+import { Settings } from 'react-slick';
 
 const Locais = () => {
   const locais = [
@@ -21,60 +25,49 @@ const Locais = () => {
       imagem: banner,
       localizacao: 'Região de Kansai',
     },
-    {
-        nome: 'Osaka',
-        imagem: banner,
-        localizacao: 'Região de Kansai',
-      },
-      {
-        nome: 'Osaka',
-        imagem: banner,
-        localizacao: 'Região de Kansai',
-      },
-      {
-        nome: 'Osaka',
-        imagem: banner,
-        localizacao: 'Região de Kansai',
-      },
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const handleNext = () => {
-    const nextIndex = currentIndex + 1 >= locais.length ? 0 : currentIndex + 1;
-    setCurrentIndex(nextIndex);
-  };
-
-  const handlePrev = () => {
-    const prevIndex = currentIndex - 1 < 0 ? locais.length - 1 : currentIndex - 1;
-    setCurrentIndex(prevIndex);
+  const sliderSettings: Settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3, // Mostra 3 cards por vez
+    slidesToScroll: 1,
+    draggable: true,
+    swipeToSlide: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2, // Reduz para 2 cards por vez em telas menores que 1024px
+        },
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1, // Reduz para 1 card por vez em telas menores que 640px
+        },
+      },
+    ],
   };
 
   return (
-    <div id="locais" className="h-screen bg-cover bg-center" style={{ backgroundImage: "url('/bg3.png')" }}>
+    <div id="locais" className="h-screen flex justify-center items-center bg-cover bg-center" style={{ backgroundImage: "url('/bg3.png')" }}>
       <div className="container mx-auto py-12">
         <h2 className="text-3xl font-bold text-center text-white mb-8">Locais Turísticos no Japão</h2>
-        <div className="relative">
-          <div className="flex overflow-x-auto">
-            {locais.map((local, index) => (
-              <div key={index} className="flex-shrink-0 mr-4" style={{ minWidth: 400 }}>
-                <div className="bg-white rounded-lg overflow-hidden shadow-lg">
-                  <Image src={local.imagem} alt={local.nome} width={400} height={250} />
-                  <div className="p-4">
-                    <h3 className="text-xl font-semibold text-gray-800">{local.nome}</h3>
-                    <p className="text-sm text-gray-600">{local.localizacao}</p>
-                  </div>
+        <Slider {...sliderSettings}>
+          {locais.map((local, index) => (
+            <div key={index} className="px-2">
+              <div className="bg-white rounded-lg overflow-hidden shadow-lg">
+                <Image src={local.imagem} alt={local.nome} width={400} height={250} />
+                <div className="p-4">
+                  <h3 className="text-xl font-semibold text-gray-800">{local.nome}</h3>
+                  <p className="text-sm text-gray-600">{local.localizacao}</p>
                 </div>
               </div>
-            ))}
-          </div>
-          <button onClick={handlePrev} className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white px-3 py-1 rounded-lg shadow-md">
-            &lt; Anterior
-          </button>
-          <button onClick={handleNext} className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white px-3 py-1 rounded-lg shadow-md">
-            Próximo &gt;
-          </button>
-        </div>
+            </div>
+          ))}
+        </Slider>
       </div>
     </div>
   );
