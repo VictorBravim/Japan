@@ -25,7 +25,7 @@ export default function Nav() {
             <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
                 <div className="flex items-center ml-0 lg:ml-8">
                 </div>
-                <div className="md:flex text-black space-x-6 lg:space-x-12 mt-4 md:mt-0">
+                <div className="md:flex text-white space-x-6 lg:space-x-12 mt-4 md:mt-0">
                     <button className=" text-base md:text-lg" onClick={() => scrollToSection('home')}>Home</button>
                     <button className="text-base md:text-lg" onClick={() => scrollToSection('sobre')}>Sobre</button>
                     <button className="text-base md:text-lg" onClick={() => scrollToSection('projeto')}>Projeto</button>
