@@ -10,12 +10,12 @@ const AccordionItem: React.FC<{ title: string; content: string }> = ({ title, co
   return (
     <div className="mb-4">
       <button
-        className="w-full bg-gray-800 text-white p-3 rounded-lg flex justify-between items-center transition-colors duration-300 ease-in-out hover:bg-gray-700 focus:outline-none"
+        className="w-full bg-gradient-to-r from-red-custom to-red-custom-2 text-white p-3 rounded-lg flex justify-between items-center transition-colors duration-300 ease-in-out focus:outline-none"
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen ? 'true' : 'false'}
         aria-controls={`accordion-${title}`}
       >
-        <span className="font-medium">{title}</span>
+        <span className="font-medium transition-all duration-300 ease-in-out">{title}</span>
         <span>{isOpen ? '▲' : '▼'}</span>
       </button>
       <div
