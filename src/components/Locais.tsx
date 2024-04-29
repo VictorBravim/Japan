@@ -1,4 +1,4 @@
-// pages/Locais.tsx
+// Locais.tsx
 'use client'
 import React from 'react';
 import Slider from 'react-slick';
@@ -31,7 +31,7 @@ const Locais = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3, // Mostra 3 cards por vez
+    slidesToShow: 3, 
     slidesToScroll: 1,
     draggable: true,
     swipeToSlide: true,
@@ -39,13 +39,13 @@ const Locais = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2, // Reduz para 2 cards por vez em telas menores que 1024px
+          slidesToShow: 2,
         },
       },
       {
         breakpoint: 640,
         settings: {
-          slidesToShow: 1, // Reduz para 1 card por vez em telas menores que 640px
+          slidesToShow: 1,
         },
       },
     ],
@@ -58,9 +58,9 @@ const Locais = () => {
         <Slider {...sliderSettings}>
           {locais.map((local, index) => (
             <div key={index} className="px-2">
-              <div className="bg-white rounded-lg overflow-hidden shadow-lg">
+              <div className="bg-white flex flex-col justify-center items-center rounded-lg overflow-hidden shadow-lg">
                 <Image src={local.imagem} alt={local.nome} width={400} height={250} />
-                <div className="p-4">
+                <div className="p-4 text-center">
                   <h3 className="text-xl font-semibold text-gray-800">{local.nome}</h3>
                   <p className="text-sm text-gray-600">{local.localizacao}</p>
                 </div>
