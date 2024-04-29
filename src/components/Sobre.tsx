@@ -50,7 +50,7 @@ const Sobre: React.FC = () => {
   ];
 
   return (
-    <div id="sobre" className="h-screen flex flex-col lg:flex-row items-center justify-center px-8 lg:px-12 lg:pt-0 pt-12">
+    <div id="sobre" className="h-screen flex flex-col lg:flex-row items-center justify-center px-8 lg:px-12 lg:pt-0 pt-12 bg-cover bg-center" style={{ backgroundImage: "url('/bg2.png')" }}>
       <div className="w-full lg:w-1/2">
         <Image src={banner} alt="Texto" width={600} height={320} />
       </div>
