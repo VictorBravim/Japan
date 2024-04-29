@@ -8,7 +8,7 @@ export default function Hero() {
             <div className="relative z-10 text-white w-full lg:w-1/3">
                 <div className="text-center mb-4">
                     <Image src={text} alt="Texto" width={600} height={32} />
-                    <p className="text-sm md:text-lg text-gray-bg font-bold mb-4 pr-0 lg:pr-20">O Japão é o destino ideal para explorar uma riqueza cultural única, oferecendo uma variedade incrível de experiências para todos os gostos e interesses.</p>
+                    <p className="text-sm md:text-lg text-gray-bg font-bold mb-4">O Japão é o destino ideal para explorar uma riqueza cultural única, oferecendo uma variedade incrível de experiências para todos os gostos e interesses.</p>
                 </div>
             </div>
             <div className="w-full lg:w-1/2">
