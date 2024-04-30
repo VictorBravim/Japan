@@ -6,6 +6,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Image from 'next/image';
 import banner from '@/assets/banner.png';
+import text3 from '@/assets/text3.png'
 import { Settings } from 'react-slick';
 
 const Locais = () => {
@@ -55,7 +56,9 @@ const Locais = () => {
     return (
         <div id="locais" className="h-screen flex justify-center items-center bg-cover bg-center" style={{ backgroundImage: "url('/bg3.png')" }}>
             <div className="container mx-auto py-12">
-                <h2 className="text-3xl font-bold text-center text-white mb-8">Locais Turísticos no Japão</h2>
+                <div className='w-full flex justify-center items-center'>
+                <Image src={text3} alt="Texto" width={600} height={32} />
+                </div>
                 <Slider {...sliderSettings}>
                     {locais.map((local, index) => (
                         <div key={index} className="px-2">

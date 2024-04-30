@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import banner from '@/assets/banner.png';
+import text2 from '@/assets/text2.png'
 
 const AccordionItem: React.FC<{ title: string; content: string; isFirst: boolean }> = ({
     title,
@@ -59,7 +60,7 @@ const Sobre: React.FC = () => {
             </div>
 
             <div className="relative z-10 text-white w-full lg:w-1/2 lg:ml-8">
-                <h2 className="text-2xl font-semibold mb-4">Informações sobre o Japão</h2>
+                <Image src={text2} alt="Texto" width={600} height={32} />
                 {accordionData.map((item, index) => (
                     <AccordionItem
                         key={index}

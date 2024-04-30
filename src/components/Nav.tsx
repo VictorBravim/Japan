@@ -3,13 +3,11 @@
 import { useState, useEffect } from 'react';
 
 export default function Nav() {
-    const [activeSection, setActiveSection] = useState('home'); // Estado para rastrear a seção ativa
+    const [activeSection, setActiveSection] = useState('home');
 
-    // Função para manipular o scroll e atualizar a seção ativa
     const handleScroll = () => {
         const scrollPosition = window.scrollY;
 
-        // Verifica a posição das seções na página e atualiza a seção ativa com base no scroll
         if (scrollPosition < window.innerHeight - 100) {
             setActiveSection('home');
         } else if (scrollPosition < 2 * window.innerHeight - 100) {
@@ -21,13 +19,12 @@ export default function Nav() {
         }
     };
 
-    // Efeito de lado para adicionar um listener de scroll quando o componente montar
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, []); // Deps vazio para executar apenas uma vez durante o ciclo de vida do componente
+    }, []);
 
     const scrollToSection = (id: string) => {
         const section = document.getElementById(id);
