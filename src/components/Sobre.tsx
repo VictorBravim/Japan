@@ -2,7 +2,7 @@
 'use client'
 import { useState } from 'react';
 import Image from 'next/image';
-import banner from '@/assets/banner.png';
+import bandeira from '@/assets/bandeira.png';
 import text2 from '@/assets/text2.png'
 
 const AccordionItem: React.FC<{ title: string; content: string; isFirst: boolean }> = ({
@@ -15,7 +15,7 @@ const AccordionItem: React.FC<{ title: string; content: string; isFirst: boolean
     return (
         <div className="mb-4">
             <button
-                className="w-full bg-gradient-to-r from-red-custom to-red-custom-2 text-white p-3 rounded-lg flex justify-between items-center transition-colors duration-300 ease-in-out focus:outline-none"
+                className="w-full bg-gradient-to-t from-red-custom-2 to-red-custom text-white p-3 rounded-lg flex justify-between items-center transition-colors duration-300 ease-in-out focus:outline-none"
                 onClick={() => setIsOpen(!isOpen)}
                 aria-expanded={isOpen ? 'true' : 'false'}
                 aria-controls={`accordion-${title}`}
@@ -56,7 +56,7 @@ const Sobre: React.FC = () => {
     return (
         <div id="sobre" className="h-screen flex flex-col lg:flex-row items-center justify-center px-8 lg:px-48 lg:pt-0 pt-12 bg-cover bg-center" style={{ backgroundImage: "url('/bg2.png')" }}>
             <div className="w-full lg:w-1/2">
-                <Image src={banner} alt="Texto" width={600} height={320} />
+                <Image src={bandeira} alt="Texto" width={600} height={320} />
             </div>
 
             <div className="relative z-10 text-white w-full lg:w-1/2 lg:ml-8">

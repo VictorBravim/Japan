@@ -31,7 +31,7 @@ const Cambio = () => {
     };
 
     return (
-        <div id="cambio" className="flex flex-col justify-center items-center h-screen px-64">
+        <div id="cambio" className="flex bg-gradient-to-t from-red-custom to-black flex-col justify-center items-center h-screen px-0 lg:px-64">
             <div className='w-full flex justify-center items-center'>
                 <Image src={text4} alt="Texto" width={600} height={32} />
             </div>
@@ -46,7 +46,7 @@ const Cambio = () => {
                         onChange={(e) => setBrlValue(e.target.value)}
                     />
                     <button
-                        className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none"
+                        className="bg-gradient-to-t from-red-custom-2 to-red-custom text-white px-4 py-2 rounded-md hover:bg-red-custom focus:outline-none"
                         onClick={handleConvert}
                         disabled={loading}
                     >

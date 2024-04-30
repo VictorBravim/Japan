@@ -5,7 +5,9 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Image from 'next/image';
-import banner from '@/assets/banner.png';
+import tokyo from '@/assets/tokyo.png'
+import kyoto from '@/assets/kyoto.png'
+import osaka from '@/assets/osaka.png'
 import text3 from '@/assets/text3.png'
 import { Settings } from 'react-slick';
 
@@ -13,17 +15,17 @@ const Locais = () => {
     const locais = [
         {
             nome: 'Tóquio',
-            imagem: banner,
+            imagem: tokyo,
             localizacao: 'Região de Kanto',
         },
         {
             nome: 'Kyoto',
-            imagem: banner,
+            imagem: kyoto,
             localizacao: 'Região de Kansai',
         },
         {
             nome: 'Osaka',
-            imagem: banner,
+            imagem: osaka,
             localizacao: 'Região de Kansai',
         },
     ];
@@ -62,8 +64,8 @@ const Locais = () => {
                 <Slider {...sliderSettings}>
                     {locais.map((local, index) => (
                         <div key={index} className="px-2">
-                            <div className="bg-white flex flex-col justify-center items-center rounded-lg overflow-hidden shadow-lg">
-                                <Image src={local.imagem} alt={local.nome} width={400} height={250} />
+                            <div className="bg-white flex flex-col justify-center items-center p-4 rounded-lg overflow-hidden shadow-lg">
+                                <Image src={local.imagem} alt={local.nome} width={400} height={250}/>
                                 <div className="p-4 text-center">
                                     <h3 className="text-xl font-semibold text-gray-800">{local.nome}</h3>
                                     <p className="text-sm text-gray-600">{local.localizacao}</p>
