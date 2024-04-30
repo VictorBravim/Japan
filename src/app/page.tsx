@@ -3,6 +3,7 @@ import Nav from '@/components/Nav'
 import Hero from '@/components/Hero';
 import Sobre from '@/components/Sobre';
 import Locais from '@/components/Locais'
+import Cambio from '@/components/Cambio';
 import Footer from '@/components/Footer';
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <Sobre />
       <Locais />
+      <Cambio />
       <Footer />
     </main>
   );
