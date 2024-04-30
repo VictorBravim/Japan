@@ -66,7 +66,7 @@ const Sobre: React.FC = () => {
                         key={index}
                         title={item.title}
                         content={item.content}
-                        isFirst={index === 0} 
+                        isFirst={index === 0}
                     />
                 ))}
             </div>
@@ -75,4 +75,3 @@ const Sobre: React.FC = () => {
 };
 
 export default Sobre;
-

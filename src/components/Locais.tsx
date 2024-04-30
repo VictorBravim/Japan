@@ -59,13 +59,13 @@ const Locais = () => {
         <div id="locais" className="h-screen flex justify-center items-center bg-cover bg-center" style={{ backgroundImage: "url('/bg3.png')" }}>
             <div className="container mx-auto py-12">
                 <div className='w-full flex justify-center items-center'>
-                <Image src={text3} alt="Texto" width={600} height={32} />
+                    <Image src={text3} alt="Texto" width={600} height={32} />
                 </div>
                 <Slider {...sliderSettings}>
                     {locais.map((local, index) => (
                         <div key={index} className="px-2">
                             <div className="bg-white flex flex-col justify-center items-center p-4 rounded-lg overflow-hidden shadow-lg">
-                                <Image src={local.imagem} alt={local.nome} width={400} height={250}/>
+                                <Image src={local.imagem} alt={local.nome} width={400} height={250} />
                                 <div className="p-4 text-center">
                                     <h3 className="text-xl font-semibold text-gray-800">{local.nome}</h3>
                                     <p className="text-sm text-gray-600">{local.localizacao}</p>
