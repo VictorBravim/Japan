@@ -1,10 +1,10 @@
 // Hero.tsx
 import Image from "next/image";
-import text from '@/assets/text.png'
+import text from '@/assets/text.webp'
 
 export default function Hero() {
     return (
-        <div id="home" className="h-screen flex flex-col lg:flex-row items-center justify-center px-8 lg:px-12 lg:pt-0 pt-12 bg-cover bg-center" style={{ backgroundImage: "url('/bg.png')" }}>
+        <div id="home" className="h-screen flex flex-col lg:flex-row items-center justify-center px-8 lg:px-12 lg:pt-0 pt-12 bg-cover bg-center" style={{ backgroundImage: "url('/bg.webp')" }}>
             <div className="relative z-10 text-white w-full lg:w-1/3">
                 <div className="text-center mb-4">
                     <Image src={text} alt="Texto" width={600} height={32} />

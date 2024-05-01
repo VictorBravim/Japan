@@ -5,10 +5,10 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Image from 'next/image';
-import tokyo from '@/assets/tokyo.png'
-import kyoto from '@/assets/kyoto.png'
-import osaka from '@/assets/osaka.png'
-import text3 from '@/assets/text3.png'
+import tokyo from '@/assets/tokyo.webp'
+import kyoto from '@/assets/kyoto.webp'
+import osaka from '@/assets/osaka.webp'
+import text3 from '@/assets/text3.webp'
 import { Settings } from 'react-slick';
 
 const Locais = () => {
@@ -56,7 +56,7 @@ const Locais = () => {
     };
 
     return (
-        <div id="locais" className="h-screen flex justify-center items-center bg-cover bg-center" style={{ backgroundImage: "url('/bg3.png')" }}>
+        <div id="locais" className="h-screen flex justify-center items-center bg-cover bg-center" style={{ backgroundImage: "url('/bg3.webp')" }}>
             <div className="container mx-auto py-12">
                 <div className='w-full flex justify-center items-center'>
                     <Image src={text3} alt="Texto" width={600} height={32} />

@@ -2,8 +2,8 @@
 'use client'
 import { useState } from 'react';
 import Image from 'next/image';
-import bandeira from '@/assets/bandeira.png';
-import text2 from '@/assets/text2.png'
+import bandeira from '@/assets/bandeira.webp';
+import text2 from '@/assets/text2.webp'
 
 const AccordionItem: React.FC<{ title: string; content: string; isFirst: boolean }> = ({
     title,
@@ -54,7 +54,7 @@ const Sobre: React.FC = () => {
     ];
 
     return (
-        <div id="sobre" className="h-screen flex flex-col lg:flex-row items-center justify-center px-8 lg:px-48 lg:pt-0 pt-12 bg-cover bg-center" style={{ backgroundImage: "url('/bg2.png')" }}>
+        <div id="sobre" className="h-screen flex flex-col lg:flex-row items-center justify-center px-8 lg:px-48 lg:pt-0 pt-12 bg-cover bg-center" style={{ backgroundImage: "url('/bg2.webp')" }}>
             <div className="w-full lg:w-1/2">
                 <Image src={bandeira} alt="Texto" width={600} height={320} />
             </div>

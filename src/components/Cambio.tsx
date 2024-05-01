@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Image from 'next/image';
-import text4 from '@/assets/text4.png'
+import text4 from '@/assets/text4.webp'
 
 const Cambio = () => {
     const [brlValue, setBrlValue] = useState('');
