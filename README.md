@@ -1,6 +1,7 @@
 # 👺 Japan
 
-![62shots_so](https://github.com/VictorBravim/Japan/assets/122113588/557f1bad-a521-4827-b2a7-e09946a975da)
+![image 5](https://github.com/VictorBravim/Japan/assets/122113588/146a7653-9077-48bc-ab99-af5e8671520d)
+
 
 ## 🚀 Overview
 
